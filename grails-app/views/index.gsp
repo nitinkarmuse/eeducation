@@ -4,6 +4,19 @@
     <meta charset="UTF-8">
     <title>E education home Page</title>
     <link rel="stylesheet" type="text/css" href="./css/home.css">
+    <!-- pingdom -->
+		<script>
+		var _prum = [['id', '5367f80eabe53d7072366c8c'],
+		             ['mark', 'firstbyte', (new Date()).getTime()]];
+		(function() {
+		    var s = document.getElementsByTagName('script')[0]
+		      , p = document.createElement('script');
+		    p.async = 'async';
+		    p.src = '//rum-static.pingdom.net/prum.min.js';
+		    s.parentNode.insertBefore(p, s);
+		})();
+		</script> 
+<!--  pingdom  -->   
 </head>
 <body>
 <div class="wrapper">
