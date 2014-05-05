@@ -13,7 +13,7 @@
     width:98%;
 }
 .white-panel{
-    background:url("gradient.png") 0 bottom repeat-x  ;
+    background:url("../images/gradient.png") 0 bottom repeat-x  ;
    width: 80%;
     height:150px;
     border-radius: 5px;
