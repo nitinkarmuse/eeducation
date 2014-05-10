@@ -229,3 +229,65 @@ p {
     text-align: center;
     /*background: white;*/
 }
+
+@media only screen and (max-device-width: 480px) {
+
+
+
+    .logo{
+        font-size: 1.5em;
+
+    }
+
+    .col{
+        display:block;
+        float:left;
+        background: #ffffff;
+        width:100%;
+    }
+    .orange-panel
+    {
+
+        height:5.4081633%;
+
+    }
+    .white-panel{
+        height: 120px;
+        background: white;
+        width: 97%;
+        margin:0 5px 0 5px;
+
+    }
+    .logo{
+        padding-top:0;
+        /*margin-top: 0;*/
+        vertical-align:top;
+    }
+    .search{
+
+        margin: 0;
+        padding-top: 20px;
+        /*width: 80%;*/
+        /*margin-right: 10%;*/
+        /*padding-top:45px;*/
+        /*vertical-align: baseline;*/
+    }
+    .search input[type="text"]{
+        border:1px solid #fa8d03;
+        width:60%;
+        height:25px;
+
+    }
+    .content-box{
+        margin: 0;
+    }
+
+    .footer{
+
+        margin-left:0;
+        margin-right:0;
+        text-align: left;
+    }
+}
+
+
