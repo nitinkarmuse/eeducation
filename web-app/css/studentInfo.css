@@ -1,0 +1,142 @@
+label{
+    color:#0a0a0a;
+    margin:10px 0 0 20px;
+    text-align:left;
+    width:62.5%;
+}
+.student-content-box{
+    background: #FFFFFA;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: bold;
+    width:80%;
+   margin-left:10%;
+}
+
+.student-fset{
+    width:40%;
+    margin:0 20% 0 25%;
+}
+legend{
+    color: #fa8d03;
+    font-weight: bold;
+    text-align:center;
+}
+
+.col-1
+{
+    display: block;
+    width:100%;
+    margin:0 20% 0 10%;
+}
+
+input{
+    margin:3px 5px 5px 20px;
+    border:1px solid grey;
+    font-family: 'Montserrat Alternates', sans-serif;
+    /*width:80%;*/
+    /*height:30px;*/
+    /*padding:5px;*/
+    background: linear-gradient( #ffffff 0%, #fff5e6 8%, #ffffff 100%);
+    box-shadow: 2px 2px 5px hsla(0, 0%, 16.6667%, 0.1);
+}
+input[type="text"]{
+
+    width:80%;
+    height:30px;
+    padding:5px;
+}
+input[type="number"]{
+
+
+    width:80%;
+    height:30px;
+    padding:5px;
+}
+input[type="email"]{
+
+
+    width:80%;
+    height:30px;
+    padding:5px;
+}
+input[type="tel"]{
+
+
+    width:80%;
+    height:30px;
+    padding:5px;
+}
+
+.select-combo-box{
+    margin:3px 5px 5px 20px;
+    border:1px solid grey;
+    width:83%;
+    height:30px;
+    background: linear-gradient( #ffffff 0%, #fff5e6 8%, #ffffff 100%);
+    box-shadow: 2px 2px 5px hsla(0, 0%, 16.6667%, 0.1);
+}
+
+input[type="date"]{
+
+    width:83%;
+    height:30px;
+}
+
+input[type="button"]{
+    background: #fa8d03;
+    color:white;
+    width:25%;
+    padding:10px;
+    border:0;
+    font-weight: bold;
+    font-size:1em;
+    height:40px;
+
+    box-shadow: 2px 2px 5px hsla(0, 0%, 16.6667%, .5);
+}
+
+.active {
+    display: block;
+}
+
+fieldset {
+    display: none;
+
+    border: 0;
+}
+#next-button{
+    margin-left: 42%;
+}
+.next-button {
+}
+.next-button:hover{
+    background: black;
+    border: 1px solid #fa8d03;
+}
+.previous-button-align{
+    display: inline-block;
+    padding:0;
+    /*width:500px;*/
+    margin-left:30%;
+
+}
+.previous-button{
+
+}
+.previous-button:hover{
+    background: black;
+    border: 1px solid #fa8d03;
+}
+
+input:required{
+    border:1px solid rgba(253,8,8,0.29);
+}
+/*input:focus:invalid{*/
+    /*background:url("./images/cross.jpg") no-repeat right;*/
+    /*padding-right: 3px;*/
+/*}*/
+/*input:focus:valid{*/
+    /*background: url("./images/tick.jpg") no-repeat right;*/
+    /*padding-right: 3px;*/
+/*}*/
+

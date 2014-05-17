@@ -1,0 +1,36 @@
+
+input[type="password"]{
+
+    width:80%;
+    height:30px;
+    padding:5px;
+}
+input[type="submit"]{
+    background: #fa8d03;
+    color:white;
+    width:25%;
+    padding:10px;
+    border:0;
+    font-weight: bold;
+    font-size:1em;
+    height:40px;
+
+    margin-left:45%;
+    box-shadow: 2px 2px 5px hsla(0, 0%, 16.6667%, .5);
+}
+input[type="submit"]:hover{
+    background: black;
+}
+#login a{
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: .7em;
+    /*text-decoration: none;*/
+    color: black;
+    padding:19px;
+}
+a:hover{
+    color: #fa8d03;
+}
+a:visited{
+    color:black;
+}

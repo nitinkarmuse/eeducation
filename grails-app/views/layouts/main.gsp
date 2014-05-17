@@ -1,28 +1,106 @@
-<!DOCTYPE html>
-<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
-<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
-<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
-<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"><!--<![endif]-->
+<html>
 	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<title><g:layoutTitle default="Grails"/></title>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="shortcut icon" href="${resource(dir: 'images', file: 'favicon.ico')}" type="image/x-icon">
-		<link rel="apple-touch-icon" href="${resource(dir: 'images', file: 'apple-touch-icon.png')}">
-		<link rel="apple-touch-icon" sizes="114x114" href="${resource(dir: 'images', file: 'apple-touch-icon-retina.png')}">
-		<link rel="stylesheet" href="${resource(dir: 'css', file: 'main.css')}" type="text/css">
-		<link rel="stylesheet" href="${resource(dir: 'css', file: 'mobile.css')}" type="text/css">
+	
+	    <meta charset="UTF-8">
+	    <title><g:layoutTitle default="E education"/></title>
+	    <r:layoutResources />
+	    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+		<link rel="stylesheet" href="${resource(dir: 'css', file: 'home.css')}" type="text/css">
+   		<link rel="stylesheet"  href="${resource(dir: 'css', file: 'superDashboard.css')}" type="text/css">
+    	<link rel="stylesheet" href="${resource(dir: 'css', file: 'studentInfo.css')}" type="text/css">
+    	    	<link rel="stylesheet" href="${resource(dir: 'css', file: 'login.css')}" type="text/css">
+    	
+		
+		 <script src="${resource(dir: 'js', file: 'jquery-2.1.0.js')}"> </script>
+	    
 		<g:layoutHead/>
-		<r:layoutResources />
+		
+	    <!-- pingdom -->
+			<script>
+			var _prum = [['id', '5367f80eabe53d7072366c8c'],
+			             ['mark', 'firstbyte', (new Date()).getTime()]];
+			(function() {
+			    var s = document.getElementsByTagName('script')[0]
+			      , p = document.createElement('script');
+			    p.async = 'async';
+			    p.src = '//rum-static.pingdom.net/prum.min.js';
+			    s.parentNode.insertBefore(p, s);
+			})();
+			</script> 
+	<!--  pingdom  --> 
+	
+			<script>
+		        $(document).ready(function(){
+		    $(".slicknav_icon").click(function() {
+		
+		    $("#menu").slideToggle();
+		
+		    });
+		        });
+		    </script>
+		
 	</head>
 	<body>
-		<div id="grailsLogo" role="banner"><a href="http://grails.org"><img src="${resource(dir: 'images', file: 'grails_logo.png')}" alt="Grails"/></a></div>
+
+		<div class="wrapper" id="wrapper">
+		    <div class="orange-panel">
+		        <div class="top-box">
+		            <div class="white-panel">
+		
+		                <div id="header">
+		
+		                        <span class="slicknav_icon">
+		                         <span class="slicknav_icon-bar"></span>
+		                         <span class="slicknav_icon-bar"></span>
+		                         <span class="slicknav_icon-bar"></span></span>
+		                </div>
+		
+		
+		                <div class="logo">
+		                    e-Education
+		                </div>
+		
+		                <div class="search">
+							<sec:ifLoggedIn>
+			                    <form name="logout" action="/eeducation/j_spring_security_logout" method="get">
+			                        <input type="submit" id="logout-button" value="logout">
+			
+			                    </form>
+								
+							</sec:ifLoggedIn>
+							<sec:ifNotLoggedIn>
+			                    <g:form name="dashboard" url="[controller:'dashboard']">
+			                        <input type="submit" id="login-button" value="login">
+			                    </g:form>
+		                    </sec:ifNotLoggedIn>
+		
+		                </div>
+		
+		            </div>
+		        </div>
+		    </div>
+		
+		</div>
+		<div class="clear"></div>
+		<nav>
+		
+		    <div class="top-menu">
+		        <div class="push-menu-left">
+		            <ul id="menu" >
+		                <li><a href="#">Home</a></li>
+		
+		                <li><a href="#">Contact us</a></li>
+		                <li><a href="#">About us</a></li>
+		            </ul>
+		        </div>
+		    </div>
+		</nav>
+	
+		<div class="clear"></div>
+	
 		<g:layoutBody/>
-		<div class="footer" role="contentinfo"></div>
-		<div id="spinner" class="spinner" style="display:none;"><g:message code="spinner.alt" default="Loading&hellip;"/></div>
-		<g:javascript library="application"/>
+		<div class="clear"></div>
+		<div class="footer"> copyright@Horizon Tech Ltd.</div>
 		<r:layoutResources />
 	</body>
 </html>
