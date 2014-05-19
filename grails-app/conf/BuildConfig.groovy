@@ -8,7 +8,7 @@ grails.project.source.level = 1.6
 
 // uncomment (and adjust settings) to fork the JVM to isolate classpaths
 grails.project.fork = [
-   run: [maxMemory:384, minMemory:384, debug:false, maxPerm:256]
+   run: [maxMemory:384, minMemory:384, debug:false, maxPerm:120]
 ]
 
 grails.project.dependency.resolution = {
