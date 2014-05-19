@@ -63,14 +63,14 @@
 		                <div class="search">
 							<sec:ifLoggedIn>
 			                    <form name="logout" action="/eeducation/j_spring_security_logout" method="get">
-			                        <input type="submit" id="logout-button" value="logout">
+			                        <input type="submit" id="search-button" value="logout">
 			
 			                    </form>
 								
 							</sec:ifLoggedIn>
 							<sec:ifNotLoggedIn>
 			                    <g:form name="dashboard" url="[controller:'dashboard']">
-			                        <input type="submit" id="login-button" value="login">
+			                        <input type="submit" id="search-button" value="login">
 			                    </g:form>
 		                    </sec:ifNotLoggedIn>
 		
@@ -82,20 +82,12 @@
 		
 		</div>
 		<div class="clear"></div>
-		<nav>
-		
-		    <div class="top-menu">
-		        <div class="push-menu-left">
-		            <ul id="menu" >
-		                <li><a href="#">Home</a></li>
-		
-		                <li><a href="#">Contact us</a></li>
-		                <li><a href="#">About us</a></li>
-		            </ul>
-		        </div>
-		    </div>
-		</nav>
-	
+		<sec:ifLoggedIn>
+			<g:render template="/common/logged_in_nav" />
+		</sec:ifLoggedIn>
+		<sec:ifNotLoggedIn>
+			<g:render template="/common/nav" />
+		</sec:ifNotLoggedIn>
 		<div class="clear"></div>
 	
 		<g:layoutBody/>

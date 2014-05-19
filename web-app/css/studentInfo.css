@@ -33,9 +33,9 @@ input{
     margin:3px 5px 5px 20px;
     border:1px solid grey;
     font-family: 'Montserrat Alternates', sans-serif;
-    /*width:80%;*/
-    /*height:30px;*/
-    /*padding:5px;*/
+    width:80%;
+    height:30px;
+    padding:5px;
     background: linear-gradient( #ffffff 0%, #fff5e6 8%, #ffffff 100%);
     box-shadow: 2px 2px 5px hsla(0, 0%, 16.6667%, 0.1);
 }
@@ -43,6 +43,7 @@ input[type="text"]{
 
     width:80%;
     height:30px;
+
     padding:5px;
 }
 input[type="number"]{
@@ -78,7 +79,7 @@ input[type="tel"]{
 
 input[type="date"]{
 
-    width:83%;
+    width:80%;
     height:30px;
 }
 
@@ -117,7 +118,7 @@ fieldset {
     display: inline-block;
     padding:0;
     /*width:500px;*/
-    margin-left:30%;
+    margin-left:28%;
 
 }
 .previous-button{
@@ -140,3 +141,29 @@ input:required{
     /*padding-right: 3px;*/
 /*}*/
 
+@media only screen and (max-device-width: 480px) {
+
+
+.student-content-box{
+    width:100%;
+    margin:0;
+    padding:0;
+}
+    .student-fset{
+        margin:0;
+        width:100%;
+    }
+    .col-1{
+        width:100%;
+        padding:0;
+        margin:0;
+
+    }
+    input[type="button"]{
+        margin-left:10%;
+        width:30%;
+}
+    #next-button{
+        margin-left: 40%;
+    }
+}
