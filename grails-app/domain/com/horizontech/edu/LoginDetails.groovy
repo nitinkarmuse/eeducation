@@ -1,6 +1,6 @@
 package com.horizontech.edu
 
-class User {
+class LoginDetails {
 
 	transient springSecurityService
 

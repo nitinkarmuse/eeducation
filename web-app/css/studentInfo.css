@@ -100,8 +100,8 @@ input[type="button"]{
     display: block;
 }
 
-fieldset {
-    display: none;
+.student-content-box fieldset {
+    display: block;
 
     border: 0;
 }

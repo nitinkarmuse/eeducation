@@ -1,6 +1,9 @@
 import com.horizontech.edu.Role
-import com.horizontech.edu.User
+import com.horizontech.edu.LoginDetails
 import com.horizontech.edu.UserRole
+import com.horizontech.edu.UserInfo
+import com.horizontech.edu.academics.Institute
+import com.horizontech.edu.common.Address
 
 class BootStrap {
 
@@ -11,21 +14,25 @@ class BootStrap {
 		def teacherRole = new Role(authority: 'ROLE_TEACHER').save(flush: true)
 		def parentRole = new Role(authority: 'ROLE_PARENT').save(flush: true)
 		
-		def adminUser = new User(username: 'admin', password: 'admin').save(flush: true)
-		def studentUser = new User(username: 'student', password: 'student').save(flush: true)
-		def superUser = new User(username: 'super', password: 'super!23').save(flush: true)
-		def teacherUser = new User(username: 'teacher', password: 'teacher').save(flush: true)
-		def parentUser = new User(username: 'parent', password: 'parent').save(flush: true)
+		if(UserInfo.findByUsername('super') == null){
+			log.error "creating super user"
+			def superUser = new LoginDetails(username: 'super', password: 'super!23').save(flush: true)
+			superUser = LoginDetails.findByUsername('super')
+			UserRole.create superUser, superUserRole, true
+			Institute ins = new Institute(name: 'super', addressLine1: '5',  addressLine2: 'Corbridge drive', city: 'Luton', postcode: 'LU2 9UF',
+				state: 'Bedfordshire', country: 'UK', active: true).save(flush: true)
+			ins = Institute.findByName('super')
+			render ins.addressLine2
+			
+			Address add	= new Address( line1: '5 Corbridge drive',  line2: '', city:'Luton', postcode:'LU2 9UF',
+				state:'Bedfordshire', country:'UK')
+			UserInfo superUserI = new UserInfo(
+				username:'super',firstName:'Nitin', middleName: 'Prakashrao', lastName:'Karmuse',
+				email:'nkarmuse@gamil.com', institute: ins, gender: 'Male', birthDate: new Date(),
+				nationality: 'British', religion:'Hindu', address: add
+				 ).save(flush: true)
 		
-		UserRole.create adminUser, adminRole, true
-		UserRole.create studentUser, studentRole, true
-		UserRole.create superUser, superUserRole, true
-		UserRole.create teacherUser, teacherRole, true
-		UserRole.create parentUser, parentRole, true
-		
-		assert User.count() == 5
-		assert Role.count() == 5
-		assert UserRole.count() == 5
+		}
 
     }
     def destroy = {

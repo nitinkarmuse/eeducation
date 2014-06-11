@@ -7,9 +7,9 @@ grails.project.source.level = 1.6
 //grails.project.war.file = "target/${appName}-${appVersion}.war"
 
 // uncomment (and adjust settings) to fork the JVM to isolate classpaths
-grails.project.fork = [
-   run: [maxMemory:384, minMemory:384, debug:false, maxPerm:120]
-]
+//grails.project.fork = [
+//   run: [maxMemory:384, minMemory:384, debug:false, maxPerm:120]
+//]
 
 grails.project.dependency.resolution = {
     // inherit Grails' default dependencies
@@ -43,6 +43,7 @@ grails.project.dependency.resolution = {
         // specify dependencies here under either 'build', 'compile', 'runtime', 'test' or 'provided' scopes e.g.
 
         // runtime 'mysql:mysql-connector-java:5.1.22'
+		runtime 'postgresql:postgresql:9.0-801.jdbc4'
     }
 
     plugins {

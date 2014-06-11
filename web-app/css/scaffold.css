@@ -1,0 +1,10 @@
+.fieldcontain :input {
+    margin:3px 5px 5px 20px;
+    border:1px solid grey;
+    font-family: 'Montserrat Alternates', sans-serif;
+    width:80%;
+    height:30px;
+    padding:5px;
+    background: linear-gradient( #ffffff 0%, #fff5e6 8%, #ffffff 100%);
+    box-shadow: 2px 2px 5px hsla(0, 0%, 16.6667%, 0.1);
+}
