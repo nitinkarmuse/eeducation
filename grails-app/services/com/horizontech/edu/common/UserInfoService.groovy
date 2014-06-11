@@ -11,8 +11,7 @@ class UserInfoService   {
 	UserInfo getCurrentUser()  {
 		LoginDetails details = springSecurityService.getCurrentUser()
 		
-		println " user = "+ details.username
- 		  UserInfo user = UserInfo.findByUsername("super")
+		  UserInfo user = UserInfo.findByUsername(details.username)
 		  //if (!user) throw new Exception( 'User not found. may be not logged in')
 		  return user
  	}
