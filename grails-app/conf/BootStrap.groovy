@@ -22,7 +22,7 @@ class BootStrap {
 			Institute ins = new Institute(name: 'super', addressLine1: '5',  addressLine2: 'Corbridge drive', city: 'Luton', postcode: 'LU2 9UF',
 				state: 'Bedfordshire', country: 'UK', active: true).save(flush: true)
 			ins = Institute.findByName('super')
-			render ins.addressLine2
+			
 			
 			Address add	= new Address( line1: '5 Corbridge drive',  line2: '', city:'Luton', postcode:'LU2 9UF',
 				state:'Bedfordshire', country:'UK')
