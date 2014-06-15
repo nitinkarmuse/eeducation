@@ -20,11 +20,12 @@ class BatchController {
     def list(Integer max) {
         params.max = Math.min(max ?: 10, 100)
 		params.sort = "course"
-        [batchInstanceList: Batch.findByCourseInList(Course.findAllByInstitute(userInfoService.currentUser.institute),params), batchInstanceTotal: Batch.count()]
+        [batchInstanceList: Batch.findAllByCourseInList(userInfoService.courseList ,params), batchInstanceTotal: Batch.count()]
     }
 
     def create() {
         [batchInstance: new Batch(params)]
+		[courseList:userInfoService.courseList]
     }
 
     def save() {

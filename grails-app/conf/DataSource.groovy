@@ -30,9 +30,9 @@ environments {
 	production {
 		dataSource {
 			dbCreate = "update"
-			url = "jdbc:postgresql://localhost:5432/eedu"
-			username = "grails"
-			password = "grails"
+			url = "jdbc:postgresql://ec2-54-247-70-127.eu-west-1.compute.amazonaws.com:5432/d23v4sfranndhg"
+			username = "amcbynecuytqcw"
+			password = "JFeBVT1RcoO6i5N3sXykjYkMcO"
 		}
 	}
 }
