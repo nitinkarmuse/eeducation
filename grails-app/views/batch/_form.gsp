@@ -47,6 +47,6 @@
 		<g:message code="batch.course.label" default="Course" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:select id="course" name="course.id" from="${com.horizontech.edu.academics.Course.list()}" optionKey="id" optionValue="name" required="true" value="${batchInstance?.course?.name}" class="many-to-one"/>
+	<g:select id="course" name="course.id" from="${courseList}" optionKey="id" optionValue="name" required="true" value="${batchInstance?.course?.name}" class="many-to-one"/>
 </div>
 
